@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+@layer utilities {
+    .ul-menu ul {
+      display: flex;
+      width: 100%;
+    }
+    .ul-menu ul .dropdown-menu {
+        display: none;
+    }
+    .bg-light-yellow{
+        color: var(--#DCDDD3);
+    } 
+  }
