@@ -1533,12 +1533,12 @@ p {
   padding-top: 1.5rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .text-center {
@@ -1649,6 +1649,11 @@ p {
 .text-black-100 {
   --tw-text-opacity: 1;
   color: rgb(31 31 41 / var(--tw-text-opacity));
+}
+
+.text-blue-100 {
+  --tw-text-opacity: 1;
+  color: rgb(191 224 244 / var(--tw-text-opacity));
 }
 
 .shadow-\[11px_12px_1px_\#a6dedf\] {
@@ -2448,14 +2453,6 @@ body{
     margin-top: 2.5rem;
   }
 
-  .md\:mr-9 {
-    margin-right: 2.25rem;
-  }
-
-  .md\:mr-14 {
-    margin-right: 3.5rem;
-  }
-
   .md\:w-1\/4 {
     width: 25%;
   }
@@ -2557,6 +2554,11 @@ body{
     padding-bottom: 5rem;
   }
 
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:pr-2 {
     padding-right: 0.5rem;
   }
@@ -2585,26 +2587,18 @@ body{
     padding-bottom: 0px;
   }
 
-  .md\:pr-14 {
-    padding-right: 3.5rem;
-  }
-
-  .md\:pr-20 {
-    padding-right: 5rem;
+  .md\:pt-9 {
+    padding-top: 2.25rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .lap\:pr-28 {
-    padding-right: 7rem;
+  .lap\:pr-24 {
+    padding-right: 6rem;
   }
 
   .lap\:pr-14 {
     padding-right: 3.5rem;
-  }
-
-  .lap\:pr-24 {
-    padding-right: 6rem;
   }
 }
 
