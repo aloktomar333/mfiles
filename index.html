@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="">
+            <div class="flex flex-wrap top-head justify-end bg-white-300 py-[10px]">
+                <div class="main-container">
+                    <nav class="nav-top-wrap">
+                        <div class="flex flex-wrap inner-nav justify-center md:justify-end">
+                            <div class="ul-menu flex justify-end top-menu-a top-menu-left-a">
+                                <ul>
+                                    <li><a href="#">Customers</a> </li>
+                                    <li><a href="#">Partners</a> </li>
+                                    <li><a href="#">Contact Us</a> </li>
+                                    <li><a href="#">Free Trial</a> </li>
+                                    <li><a href="#">English</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">sub menu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="search-top flex">
+                                <input class="pl-10 text-xs max-w-[140px] bg-white-500 text--[13px] text-black-100 ml-10 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
+                            </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="main-container relative bot-m-rp py-5">
+            <div class="flex flex-wrap bottom-head">
+                <div class="w-full md:w-1/5">
+                    <div class="logo max-w-[110px] flex items-center h-full">
+                        <a href="#"><img src="./images/logo.svg" alt="logo"></a>
+                    </div>
+                </div>
+                <div x-data="{ show: false }" class="md:w-4/5 relative">
+                    <button @click="show = ! show" class="menu"
+                        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                        aria-label="Main Menu">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                    <nav x-show="show" :class="{ 'active': show }" class="nav-wrap">
+                        <div class="flex flex-wrap inner-nav md:w-full md:justify-end flex-col md:flex-row">
+                            <div
+                                class="ul-menu flex justify-end menu-a menu-left-mrg-a sub-menu-css items-center justify-end-ul md:flex-auto">
+                                <ul>
+                                    <li><a href="#">Solution</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">sub menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">products</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">sub menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Resources</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">sub menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">About</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">sub menu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-menu md:flex-initial">
+                                <a class="ml-16 border-[1px] btn btn-pink px-14 py-[12px]">schedule a demo</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="sec-banner tilt-bg relative overflow-hidden bg-blue-300 width-half">
+        <div class="banner-bg-img absolute w-full h-full left-0 bg-no-repeat bg-cover scale-105 z-0 bg-right"
+            style="background:url(./images/banner.png) no-repeat right 50%;"></div>
+        <div class="main-container">
+            <div class="relative z-10">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2">
+                        <div class="banner-right-content right-tilt-bg clip-h-0">
+                            <h1>Can Your Business be
+                                More Productive?</h1>
+                            <div class="text-base mt-10 mb-7 pr-0 xxl:pr-10">
+                                <div class="text-lg leading-6 font-normal text-white-100 clip-h-0">
+                                    <p>Discover your competitive advantage with M-Files, the global
+                                        leader in metadata-driven document management</p>
+                                </div>
+                            </div>
+                            <div class="btn-menu md:flex-initial">
+                                <a class="scale-to-one scale-125 btn btn-white border-none">schedule a
+                                    demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-l-r sec-2 py-12 md:py-24">
+        <div class="main-container">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 md:pr-11">
+                    <div class="relative iframe-vid" style="padding-top: 56.25%">
+
+                        <iframe class="absolute inset-0 w-full h-full scale-to-one" src="https://www.youtube.com/embed/hAP2QF--2Dg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="p-decoration h2-decoration mt-6 md:mt-14 clip-h-0 h2-blue-300 p-black-100">
+                        <h2>Experience Better Document<br>
+                            Management Through Metadata
+                        </h2>
+                        <p>
+                            The M-Files document management platform makes it easier to find,
+                            share, and secure business information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-100 py-12 md:py-24 mutable-tab-section">
+        <div class="main-container">
+            <div class="text-blue-900 text-center mb-10 mod-title">
+                <h2>Manage Document-Centric Processes More Productively and Securely</h2>
+            </div>
+            <div x-data="{ openTab: 1,open: false  }" class="overflow-hidden">
+                <div class="bg-white-100 p-5 rounded-t-[5px] shadow-[2px_2px_3px_#1c243a33] relative z-10 mod-display-content">
+                    <div class="tap-box-wrap">
+                        <div class="tap-box" x-show="openTab === 1" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap mod-rev">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="mod-head text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second counts. With our metadata-driven document platform, you'll find the right information as soon as you need it. You'll also realize a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10 mod-btn">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img mod-im-v">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 2" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 3" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 4" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 5" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-btn">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tap-click-wrap bg-[#EBF3F9] px-3 md:px-6 pb-4 rounded-b-md">
+                    <div class="flex flex-wrap">
+
+                        <div @click="openTab = 1" :class="{ 'active-tab': openTab === 1 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            Realize ROI Quickly
+                        </div>
+                        <div @click="openTab = 2" :class="{ 'active-tab': openTab === 2 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            Find and Use Documents Easily
+                        </div>
+                        <div @click="openTab = 3" :class="{ 'active-tab': openTab === 3 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            Complete Work Effectively
+                        </div>
+                        <div @click="openTab = 4" :class="{ 'active-tab': openTab === 4 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            Realize ROI Quickly
+                        </div>
+                        <div @click="openTab = 5" :class="{ 'active-tab': openTab === 5 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            Realize ROI Quickly
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:pt-20 md:pb-16">
+        <div class="main-container">
+            <div class="">
+                <div class="h2-decoration text-center mb-20 text-blue-300">
+                    <h2>Industry-Tailored Solutions
+                    </h2>
+                </div>
+                <div class="ind-box">
+                    <div class="grid md:grid-cols-4 gap-10 text-center">
+                        <div class="bg-white-200 tg-r-b img-top-minus">
+                            <div
+                                class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
+                                <img class="skew-x-12" src="./images/ind-1.svg"></div>
+                            <div class="head-text-blue-300 h4-text-30 h4-max-width">
+                                <h4>Accounting, Tax and Audit </h4>
+                                <p>Improve billable utilization and 
+                                    give your firm a competitive edge through process automation and information control.</p>
+                            </div>
+                            <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
+                        </div>
+                        <div class="bg-white-200 tg-r-b img-top-minus">
+                            <div
+                                class="bg-blue-700   text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
+                                <img class="skew-x-12" src="./images/ind-2.svg"></div>
+                            <div class="head-text-blue-300 h4-text-30 h4-max-width">
+                                <h4>Management Consulting</h4>
+                                <p>Get more leverage from your firm’s intellectual capital by automating processes and improving clients’ experience.</p>
+                            </div>
+                            <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
+                        </div>
+                        <div class="bg-white-200 tg-r-b img-top-minus">
+                            <div
+                                class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
+                                <img class="skew-x-12" src="./images/ind-3.svg"></div>
+                                <div class="head-text-blue-300 h4-text-30 h4-max-width">
+                                <h4>Contract Research Organizations</h4>
+                                <p>Boost efficiency and tighten controls by automating clinical documentation and publishing of SOPs and CAPA.</p>
+                            </div>
+                            <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
+                        </div>
+                        <div class="bg-white-200 tg-r-b img-top-minus">
+                            <div
+                                class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
+                                <img class="skew-x-12" src="./images/ind-4.svg"></div>
+                                <div class="head-text-blue-300 h4-text-30 h4-max-width">
+                                <h4>Wealth
+                                    Management</h4>
+                                <p>Give your firm a competitive edge 
+                                    by enforcing compliance while improving the efficiency and scalability of client support.</p>
+                            </div>
+                            <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-menu md:flex-initial text-center mt-5 md:mt-10">
+                    <a class=" border-[1px] btn btn-navy-blue py-[12px]">Other Industries</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white-200 py-12 md:py-20 md:pb-16">
+        <div class="main-container">
+            <div class="text-center mb-10">
+                <h2>Analysts and Our Customers Have Spoken</h2>
+            </div>
+            <div class="pro-wrap text-center">
+                <div class="grid md:grid-cols-4 tc-box-dec">
+                    <div class="br-box pb-8 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-blue-900 px-5 pt-6">
+                        <div class="top-s text-base text-black-100 leading-5">Forester found customers' use of M-Files for
+                            document management yields high returns.</div>
+                        <div class="per text-pink-400 text-[66px] font-bold bebas-neue-pro"> 270% ROI*</div>
+                        <div class="mt-3">
+                            <a class="link" href="#">Get The Report</a>
+                        </div>
+                    </div>
+                    <div class="br-box pb-8 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-blue-900 px-5 pt-6">
+                        <div class="top-s text-base text-black-100 leading-5">Gartner Peer Insights respondents who 
+                            would recommend M-Files.</div>
+                        <div class="per text-pink-400 text-[66px] font-bold bebas-neue-pro"> 90%</div>
+                        <div class="mt-3">
+                            <a class="link" href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="br-box pb-8 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-blue-900 px-5 pt-6">
+                        <div class="top-s text-base text-black-100 leading-5">Improvement in categorizing and 
+                            indexing of documents. </div>
+                        <div class="per text-pink-400 text-[66px] font-bold bebas-neue-pro"> 60%</div>
+                        <div class="mt-3">
+                            <a class="link" href="#">Read Case Study</a>
+                        </div>
+                    </div>
+                    <div class="br-box pb-8 md:pb-0 border-b-2 md:border-b-0 md:border-r-2 border-blue-900 px-5 pt-6">
+                        <div class="top-s text-base text-black-100 leading-5">More efficient searching for documents 
+                            and information. </div>
+                        <div class="per text-pink-400 text-[66px] font-bold bebas-neue-pro"> 90%</div>
+                        <div class="mt-3">
+                            <a class="link" href="#">Learn How</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs text-center mt-12 md:mt-16">
+                    *Based on Forrester Total Economic Impact report. Savings realized over a period of 3 years.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-700 py-12 md:py-24 mutable-tab-section">
+        <div class="main-container">
+            <div class="text-blue-900 text-center mb-10 mod-title">
+                <h2>Manage Document-Centric Processes More Productively and Securely</h2>
+            </div>
+            <div x-data="{ openTab: 1,open: false  }" class="overflow-hidden">
+                <div class="bg-white-100 p-5 rounded-t-[5px] shadow-[2px_2px_3px_#1c243a33] relative z-10 mod-display-content">
+                    <div class="tap-box-wrap">
+                        <div class="tap-box" x-show="openTab === 1" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap mod-rev">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="mod-head text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>93% of Gartner Peer Insights respondents would recommend M-Files*</h2>
+                                        <p>
+                                            M-Files strives to deliver best-in-class customer satisfaction across global enterprises. Find out why so many of our customers love how M-Files has helped them get a handle on their business-crucial data, documents, and information.
+*As of February 15th, 2022, based on 72 reviews over the past 12 months.
+                                        </p>
+                                        <div class="mt-10 mod-btn">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img mod-im-v">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 2" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 3" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 4" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tap-box" x-show="openTab === 5" x-transition:enter.duration.1500ms>
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/2">
+                                    <div
+                                        class="text-lg h2-mb-5 h2-decoration h2-uppercase h3-bottom-25 flex flex-col h-full justify-center md:pl-10 max-w-[470px]">
+                                        <h2>UNEXPECTED RETURNS</h2>
+                                        <p>
+                                            When you're searching for critical information, every second
+                                            counts. With our metadata-driven document platform, you'll
+                                            find the right information as soon as you need it. You'll also
+                                            find a 270% ROI and 40% boost in productivity.
+                                        </p>
+                                        <div class="mt-10">
+                                            <a href="#" class="btn btn-blue border-[1px]">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2">
+                                    <div class="content-img">
+                                        <img class="w-full" src="./images/left-sec03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-btn">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tap-click-wrap bg-[#EBF3F9] px-3 md:px-6 pb-4 rounded-b-md">
+                    <div class="flex flex-wrap">
+
+                        <div @click="openTab = 1" :class="{ 'active-tab': openTab === 1 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            <img src="images/GartnerPeerInsightsLogo_onlight.svg">
+                        </div>
+                        <div @click="openTab = 2" :class="{ 'active-tab': openTab === 2 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            <img src="images/Crowe-Logo-200x60px.svg">
+                        </div>
+                        <div @click="openTab = 3" :class="{ 'active-tab': openTab === 3 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            <img src="images/Horne-Logo-200x60px.svg">
+                        </div>
+                        <div @click="openTab = 4" :class="{ 'active-tab': openTab === 4 }"
+                            class="tab tab-30 bebas-neue-pro">
+                            <img src="images/Stearns-Bank-Logo-200x60px.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white-200 py-20">
+        <div class="main-container">
+            <div class="text-center mb-11">
+                <h2>Learn More</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10 g-parnt-dec">
+                <div class="learn-box">
+                    <div class="ver-box">
+                        <div class="img-wrap">
+                            <img src="images/ROWERS-thumbnail.png">
+                        </div>
+                        <div class="bg-white-100 pb-4 px-7 pt-7 bot-l-r">
+                            <div class="content ">
+                                <h2>More Resources</h2>
+                                <p>Visit the M-Files Resource Hub — where we share our decades of expertise with you and the business community. Check out our resources for tons of actionable takeaways.</p>
+                            </div>
+                            <div class="btn-wrap mt-24">
+                                <a class="btn btn-blue border-[1px]" href="#">explore resources</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learn-box">
+                    <div class="ver-box">
+                        <div class="img-wrap">
+                            <img src="images/images-image-placeholder.png">
+                        </div>
+                        <div class="bg-white-100 pb-4 px-7 pt-7 bot-l-r">
+                            <div class="content ">
+                                <h2>The Total Economic Impact™ Of M-Files</h2>
+                                <p>Visit the M-Files Resource Hub — where we share our decades of expertise with you and the business community. Check out our resources for tons of actionable takeaways.</p>
+                            </div>
+                            <div class="btn-wrap mt-24">
+                                <a class="btn btn-blue border-[1px]" href="#">explore resources</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 sec-tilt-bg ">
+        <div class="main-container">
+            <div class="rounded-md overflow-hidden">
+                <div class="flex flex-wrap overflow-hidden">
+                    <div class="w-full md:w-1/2">
+                        <div class="img-wrap relative -z-10">
+                            <img class="w-full" src="images/bootom-titlt-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="relative bg-titlt-half h-full flex-wrap grid content-center p-5">
+                            <div class="h2-decoration p-decoration text-white-100">
+                                <h2>See M-Files in Action.</h2>
+                                    <p>Seeing is believing. Schedule a demo to learn more about simplified
+                                        search, automatic workflows, intuitive user interfaces, and built-in
+                                        integrations with existing applications and file systems.
+                                    </p>
+                            </div>
+                            <div class="mt-11">
+                                <a class=" btn uppercase btn-blue-300 border-[1px]" href="">scadule a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <footer class="bg-blue-900 footer pt-36 pb-12 px-5 md:px-0">
+        <div class="main-container">
+            <div class="">
+                <div class="logo-foo mb-7">
+                    <img src="./images/footer-logo.png" alt="footer logo">
+                </div>
+                <div class="footer-menu-wrap border-t-[1px] border-blue-100 pt-7">
+                    <div class="flex flex-wrap f-foo">
+                        <div class=" md:w-4/5">
+
+                            <div class="flex flex-wrap">
+                                <div class="w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
+                                    <h6>Popular Links</h6>
+                                    <ul>
+                                        <li><a href="#">2021 Gartner Magic Quadrant" for Content Services Platforms</a></li> 
+                                        <li><a href="">What is enterprise content management?</a></li> 
+                                        <li><a href="">Business process management</a></li>
+                                        <li><a href="">Collaboration solutions</a></li>
+                                        <li><a href="">Solutions by Industry</a></li>
+                                        <li><a href="">Key Capabilities</a></li>
+                                        <li><a href="">M-Files Editions</a></li>
+                                    </ul>
+                                </div>
+                                <div class="w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
+                                    <h6>Popular Links</h6>
+                                    <ul>
+                                        <li><a href="#">Contact us</a></li>
+                                        <li><a href="">Schedule a Demo</a></li>
+                                        <li><a href="">Get a Quote</a></li>
+                                        <li><a href="">Careers</a></li>
+                                        <li><a href="">Trust Center</a></li>
+                                        <li><a href="">Privacy Policy</a></li>
+                                        <li><a href="">Security Hall of Fame</a></li> 
+                                    </ul>
+                                </div>
+                                <div class="w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
+                                    <h6>Popular Links</h6>
+                                    <ul>
+                                        <li><a href="#">Customer Support Portal</a></li>
+                                        <li><a href="">Partner Hub</a></li>
+                                        <li><a href="">Developer Portal</a></li>
+                                        <li><a href="">User Guide</a></li>
+                                        <li><a href="">How-to Videos</a></li>
+                                        <li><a href="">Product News</a></li>
+                                        <li><a href="">Terms and Conditions</a></li> 
+                                    </ul>
+                                </div>
+                                <div class="w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn lap:pr-14 lst-mn">
+                                    <ul> 
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="">Cookie Preferences</a></li>
+                                        <li><a href="">Terms of Use</a></li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/5">
+                            <div class="max-w-[160px] mt-11 md:mt-0 md:ml-auto">
+                                <div class="ul-list social-footer ">
+                                    <ul>
+                                        <li><a href=""><img src="./images/facebook-brands.svg"></a></li>
+                                        <li><a href=""><img src="./images/instagram-brands.svg"></a></li>
+                                        <li><a href=""><img src="./images/linkedin-brands.svg"></a></li>
+                                        <li><a href=""><img src="./images/twitter-brands.svg"></a></li>
+                                        <li><a href=""><img src="./images/youtube-brands.svg"></a></li>
+                                        <li><a href=""><img src="./images/blog-solid.svg"></a></li>
+                                    </ul>
+                                </div>
+                            </div>"
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-wrap text-white-100 text-xs mt-16">
+                <p>2022 M-Files, AII Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    
+ 
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./assets/script.js"></script>
+ 
+</body>
+
+</html>
