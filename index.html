@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <div class="">
+        <div class="top-menu hidden md:block">
             <div class="flex flex-wrap top-head justify-end bg-white-300 py-[10px]">
                 <div class="main-container">
                     <nav class="nav-top-wrap">
@@ -42,12 +42,15 @@
         </div>
         <div class="main-container relative bot-m-rp py-5">
             <div class="flex flex-wrap bottom-head">
-                <div class="w-full md:w-1/5">
+                <div class="w-32 md:w-1/5">
                     <div class="logo max-w-[110px] flex items-center h-full">
                         <a href="#"><img src="./images/logo.svg" alt="logo"></a>
                     </div>
                 </div>
-                <div x-data="{ show: false }" class="md:w-4/5 relative">
+                <div x-data="{ show: false }" class=" w-[calc(100%-128px)] md:w-4/5 relative flex justify-end items-center">
+                    <div x-data="{ open: false}"  class="mob-search md:hidden">
+                        <input  @click="open = true" :class="{ 'active': open }" class="pl-10 text-xs bg-transparent pointer w-[25px] duration-300 text--[13px] text-black-100 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
+                    </div>
                     <button @click="show = ! show" class="menu"
                         onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
                         aria-label="Main Menu">
@@ -603,11 +606,11 @@
                             <img class="w-full" src="images/images-image-placeholder.png">
                         </div>
                         <div class="bg-white-100 pb-4 px-7 pt-7 bot-l-r">
-                            <div class="content p-text-18 font-semibold">
+                            <div class="content p-text-18 font-semibold md:pr-6">
                                 <p>The Total Economic Impact™ Of M-Files</p>
                             </div>
                             <div class="btn-wrap mt-12">
-                                <a class="link flex" href="#"><span class="read-icon pr-3"><img src="images/icons-read.svg"></span>read</a>
+                                <a class="link flex text-blue-300 hover:text-black-100 duration-500" href="#"><span class="read-icon pr-3"><img src="images/icons-read.svg"></span>read</a>
                             </div>
                         </div>
                     </div>

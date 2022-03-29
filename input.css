@@ -214,7 +214,7 @@
         stroke-width: 6;
       }
       .menu {
-        position: absolute;
+        /* position: absolute; */
         right: 0;
         top: 0;
         display: none;
@@ -727,6 +727,16 @@
             max-width: 100%;
             padding-bottom: 0.75rem;
             width: 100%;
+        }
+        .mob-search input#search {
+            min-width: unset;
+            width: 25px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        input#search.active {
+            width: 130px;
+            background-color: #ebede5;
         }
     }
   }
