@@ -672,6 +672,12 @@ p {
   filter: grayscale(0);
 }
 
+@media(max-width:767px) {
+  .btn-blue.mutable-tab-section .mod-rev {
+    flex-direction: column-reverse;
+  }
+}
+
 .btn-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1049,6 +1055,10 @@ p {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .flex {
@@ -2470,6 +2480,10 @@ body{
     width: 130px;
     background-color: #ebede5;
   }
+
+  .bg-blue-700.mutable-tab-section .mod-rev {
+    flex-direction: column-reverse;
+  }
 }
 
 @font-face {
@@ -2540,6 +2554,10 @@ body{
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .md\:block {
@@ -2651,29 +2669,14 @@ body{
     padding-bottom: 5rem;
   }
 
-  .md\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .md\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .md\:px-11 {
-    padding-left: 2.75rem;
-    padding-right: 2.75rem;
-  }
-
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .md\:pr-2 {

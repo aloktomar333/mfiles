@@ -742,5 +742,8 @@
             width: 130px;
             background-color: #ebede5;
         }
+        .bg-blue-700.mutable-tab-section .mod-rev {
+            flex-direction: column-reverse;
+        }
     }
   }
