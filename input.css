@@ -667,6 +667,9 @@
     .p-text-18 p {
         font-size:18px;
     }
+    .tc-box-dec .brd-cmd:last-child {
+        border: none;
+    }
     @media(max-width:1200px) {
         .menu-left-mrg-a li a {
             margin-left: 40px;
