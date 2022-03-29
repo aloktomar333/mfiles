@@ -19,7 +19,7 @@
         @apply text-4xl md:text-[66px] md:leading-[66px];
       }
     h2 {
-      @apply font-bold text-4xl leading-8 md:text-[42px] md:leading-[52px];
+      @apply font-bold text-4xl leading-[46px] md:text-[42px] md:leading-[52px];
     }
     h3 {
         @apply font-bold text-[32px];
@@ -663,6 +663,9 @@
     }
     .footer-mn a:hover {
         color: var(--pink)
+    }
+    .p-text-18 p {
+        font-size:18px;
     }
     @media(max-width:1200px) {
         .menu-left-mrg-a li a {
