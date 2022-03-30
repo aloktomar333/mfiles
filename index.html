@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="./assets/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>   
+<link href="./assets/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="top-menu hidden md:block">
+        <div class="top-menu hidden tab:block">
             <div class="flex flex-wrap top-head justify-end bg-white-300 py-[10px]">
                 <div class="main-container">
                     <nav class="nav-top-wrap">
@@ -48,7 +49,7 @@
                     </div>
                 </div>
                 <div x-data="{ show: false }" class=" w-[calc(100%-128px)] md:w-4/5 relative flex justify-end items-center">
-                    <div x-data="{ open: false}"  class="mob-search md:hidden">
+                    <div x-data="{ open: false}"  class="mob-search lg:hidden">
                         <input  @click="open = true" :class="{ 'active': open }" class="pl-10 text-xs bg-transparent pointer w-[25px] duration-300 text--[13px] text-black-100 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
                     </div>
                     <button @click="show = ! show" class="menu"
@@ -90,7 +91,7 @@
                                 </ul>
                             </div>
                             <div class="btn-menu md:flex-initial">
-                                <a class="mt-9 md:ml-16 border-[1px] btn btn-pink px-14 py-[12px]">schedule a demo</a>
+                                <a class="ml-0 md:ml-5 lg:ml-16 border-[1px] btn btn-pink px-14 py-[12px]">schedule a demo</a>
                             </div>
                         </div>
                     </nav>
@@ -109,7 +110,7 @@
                         <div class="banner-right-content right-tilt-bg clip-h-0">
                             <h1>Can Your Business be
                                 More Productive?</h1>
-                            <div class="text-base mt-10 mb-7 pr-0 xxl:pr-10">
+                            <div class="text-base lg:mt-10 mb-7 pr-0 xxl:pr-10">
                                 <div class="text-lg leading-6 font-normal text-white-100 clip-h-0">
                                     <p>Discover your competitive advantage with M-Files, the global
                                         leader in metadata-driven document management</p>
@@ -142,7 +143,7 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <div class="p-decoration h2-decoration mt-6 md:mt-14 clip-h-0 h2-blue-300 p-black-100">
+                    <div class="p-decoration h2-decoration mt-6 md:mt-14 clip-h-0 h2-blue-300 p-black-100 pr-0 tab:pr-24 lap:pr-56">
                         <h2>Experience Better Document<br>
                             Management Through Metadata
                         </h2>
@@ -320,9 +321,10 @@
                     <h2>Industry-Tailored Solutions
                     </h2>
                 </div>
+               
                 <div class="ind-box">
-                    <div class="flex flex-wrap gap-10 text-center custom-wd-rp">
-                        <div class="bg-white-200 tg-r-b img-top-minus flex-1 custom-wd">
+                    <div class="swiper-wrapper text-center custom-wd-rp">
+                        <div class="bg-white-200 tg-r-b img-top-minus custom-wd">
                             <div
                                 class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
                                 <img class="skew-x-12" src="./images/ind-1.svg"></div>
@@ -333,7 +335,7 @@
                             </div>
                             <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
                         </div>
-                        <div class="bg-white-200 tg-r-b img-top-minus flex-1 custom-wd">
+                        <div class="bg-white-200 tg-r-b img-top-minus custom-wd">
                             <div
                                 class="bg-blue-700   text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
                                 <img class="skew-x-12" src="./images/ind-2.svg"></div>
@@ -343,7 +345,7 @@
                             </div>
                             <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
                         </div>
-                        <div class="bg-white-200 tg-r-b img-top-minus flex-1 custom-wd">
+                        <div class="bg-white-200 tg-r-b img-top-minus custom-wd">
                             <div
                                 class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
                                 <img class="skew-x-12" src="./images/ind-3.svg"></div>
@@ -353,7 +355,19 @@
                             </div>
                             <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
                         </div>
-                        <div class="bg-white-200 tg-r-b img-top-minus flex-1 custom-wd">
+                        <div class="bg-white-200 tg-r-b img-top-minus custom-wd">
+                            <div
+                                class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
+                                <img class="skew-x-12" src="./images/ind-4.svg"></div>
+                                <div class="head-text-blue-300 h4-text-30 h4-max-width">
+                                <h4>Wealth
+                                    Management</h4>
+                                <p>Give your firm a competitive edge 
+                                    by enforcing compliance while improving the efficiency and scalability of client support.</p>
+                            </div>
+                            <a href="#" class="link mt-9 inline-flex font-semibold">LEARN MORE</a>
+                        </div>
+                        <div class="bg-white-200 tg-r-b img-top-minus custom-wd">
                             <div
                                 class="bg-blue-700 text-center absolute -mt-28 left-2/4 -translate-x-1/2 p-5 -skew-x-12">
                                 <img class="skew-x-12" src="./images/ind-4.svg"></div>

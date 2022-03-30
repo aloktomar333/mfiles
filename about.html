@@ -10,9 +10,9 @@
     <link href="/assets/style.css" rel="stylesheet">
 </head>
 <header>
-    <div class="">
-        <div class="flex flex-wrap top-head justify-end bg-white-300 py-4">
-            <div class="w-full max-w-6xl m-auto">
+    <div class="top-menu hidden tab:block">
+        <div class="flex flex-wrap top-head justify-end bg-white-300 py-[10px]">
+            <div class="main-container">
                 <nav class="nav-top-wrap">
                     <div class="flex flex-wrap inner-nav justify-center md:justify-end">
                         <div class="ul-menu flex justify-end top-menu-a top-menu-left-a">
@@ -27,21 +27,26 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <input class="pl-8 text-xs max-w-[140px] ml-10 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
+                            <div class="search-top flex">
+                            <input class="pl-10 text-xs max-w-[140px] bg-white-500 text--[13px] text-black-100 ml-10 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
+                        </div>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
-    <div class="max-w-6xl m-auto py-4 relative">
+    <div class="main-container relative bot-m-rp py-5">
         <div class="flex flex-wrap bottom-head">
-            <div class="w-full md:w-1/4">
+            <div class="w-32 md:w-1/5">
                 <div class="logo max-w-[110px] flex items-center h-full">
-                    <a href="#"><img src="images/logo.png" alt="logo"></a>
+                    <a href="#"><img src="./images/logo.svg" alt="logo"></a>
                 </div>
             </div>
-            <div x-data="{ show: false }" class="md:w-3/4 relative">
+            <div x-data="{ show: false }" class=" w-[calc(100%-128px)] md:w-4/5 relative flex justify-end items-center">
+                <div x-data="{ open: false}"  class="mob-search lg:hidden">
+                    <input  @click="open = true" :class="{ 'active': open }" class="pl-10 text-xs bg-transparent pointer w-[25px] duration-300 text--[13px] text-black-100 focus:outline-none" type="search" name="search" id="search" placeholder="Search" autocomplete="off">
+                </div>
                 <button @click="show = ! show" class="menu"
                     onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
                     aria-label="Main Menu">
@@ -81,7 +86,7 @@
                             </ul>
                         </div>
                         <div class="btn-menu md:flex-initial">
-                            <a class="ml-16 border-[1px] btn btn-pink text-xs px-14">schedule a demo</a>
+                            <a class="ml-0 md:ml-5 lg:ml-16 border-[1px] btn btn-pink px-14 py-[12px]">schedule a demo</a>
                         </div>
                     </div>
                 </nav>
@@ -91,26 +96,26 @@
 </header>
 
 
-<section class="sec-about" style="background: url(/images/about-bg.png) no-repeat center;">
-    <div class="max-w-[800px] m-auto">
-        <div class="h1-decoration h4-decoration py-24 text-white-100">
+<section class="sec-about py-14 md:py-24" style="background: url(/images/about-bg.png) no-repeat center;">
+    <div class="main-container">
+        <div class="h1-decoration h4-decoration max-w-[780px] m-auto text-white-100 h4-head-ban-dec text-center h4-banner-top-space">
             <h1>Discover the Smarter Way to Work</h1>
-            <h5>The M-Files document management platform enables knowledge workers
+            <h4>The M-Files document management platform enables knowledge workers
                 around the world to instantly find and use the right documents in any
                 context, automate business processes, and enforce information control.
-            </h5>
+            </h4>
         </div>
     </div>
 </section>
 
-<section class="py-24">
+<section class="sec-l-r py-14 md:py-24">
     <div class="max-w-6xl m-auto px-5 xl:px-0 ">
         <div class="grid md:grid-cols-2 gap-x-10">
             <div class="img-wrap">
-                <img src="images/about-sec-02.png">
+                <img class="w-full" src="images/about-sec-02.png">
             </div>
             <div class="content-right">
-                <div class="h2-decoration h4-decoration py-24 ">
+                <div class="h2-decoration h4-decoration pt-10 lg:pt-20 h2-blue-300 h2-bottom-10 md:pr-12 lg:pr-24">
                     <h2>Our Mission = Your Competitive Edge</h2>
                     <p>
                         M-Files gives businesses a competitive edge by making document-centric processes
@@ -120,69 +125,70 @@
         </div>
     </div>
 </section>
+ 
 
-<section class="bg-white-200 py-12 md:py-28 sec-lt-about-us">
+<section class="bg-white-200 py-12 md:py-28 md:pb-20 sec-lt-about-us">
     <div class="max-w-6xl m-auto px-5 xl:px-0">
         <div class="text-center mb-12">   <h2>A Little Bit About Us        </h2></div>
         <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10">
-            <div class="about-box bg-white-400 py-8 px-4 flex justify-center flex-wrap rounded-md">
+            <div class="about-box bg-white-400 py-6 px-4 flex justify-center flex-wrap rounded-md bebas-neue-pro">
                 <div class="w-full justify-center  top flex  text-pink-400 font-bold items-center max-w-[200px]">
-                    <img class="w-full max-w-[60px]" src="images/lit-icon-1.png">
-                    <div class="pl-2 text-5xl w-full">500+ </div>
+                    <img class="w-full max-w-[60px]" src="images/employee-chair.svg">
+                    <div class="pl-2 text-5xl tab:text-[66px] w-full bebas-neue-pro leading-[normal]">500+ </div>
                 </div>
-                <div class="bot text-center font-bold text-xl w-full">
+                <div class="bot text-center font-bold text-3xl w-full">
                     employees
                 </div>
             </div>
-            <div class="about-box bg-white-400 py-8 px-4 flex justify-center flex-wrap rounded-md">
+            <div class="about-box bg-white-400 py-6 px-4 flex justify-center flex-wrap rounded-md bebas-neue-pro">
                 <div class="w-full justify-center  top flex  text-pink-400 font-bold items-center max-w-[200px]">
-                    <img class="w-full max-w-[60px] md:max-w-full" src="images/lit-icon-1.png">
-                    <div class="pl-2 text-5xl w-full">300+ </div>
+                    <img class="w-full max-w-[60px] md:max-w-full" src="images/partner-handshake.svg">
+                    <div class="pl-2 text-5xl tab:text-[66px] w-full bebas-neue-pro leading-[normal]">300+ </div>
                 </div>
-                <div class="bot text-center font-bold text-xl w-full">
-                    employees
-                </div>
-            </div>
-            <div class="about-box bg-white-400 py-8 px-4 flex justify-center flex-wrap rounded-md">
-                <div class="w-full  top flex  text-pink-400 font-bold items-center max-w-[200px]">
-                    <img class="w-full max-w-[60px]" src="images/lit-icon-1.png">
-                    <div class="pl-2 text-5xl w-full">5000+ </div>
-                </div>
-                <div class="bot text-center font-bold text-xl w-full">
-                    employees
+                <div class="bot text-center font-bold text-3xl w-full">
+                    partners
                 </div>
             </div>
-            <div class="about-box bg-white-400 py-8 px-4 flex justify-center flex-wrap rounded-md">
+            <div class="about-box bg-white-400 py-6 px-4 flex justify-center flex-wrap rounded-md bebas-neue-pro">
                 <div class="w-full  top flex  text-pink-400 font-bold items-center max-w-[200px]">
-                    <img class="w-full max-w-[60px]" src="images/lit-icon-1.png">
-                    <div class="pl-2 text-5xl w-full">100+ </div>
+                    <img class="w-full max-w-[60px]" src="images/customer-hands.svg">
+                    <div class="pl-2 text-5xl tab:text-[66px] w-full bebas-neue-pro leading-[normal]">5000+ </div>
                 </div>
-                <div class="bot text-center font-bold text-xl w-full">
-                    employees
+                <div class="bot text-center font-bold text-3xl w-full">
+                    customers
+                </div>
+            </div>
+            <div class="about-box bg-white-400 py-6 px-4 flex justify-center flex-wrap rounded-md bebas-neue-pro">
+                <div class="w-full  top flex  text-pink-400 font-bold items-center max-w-[200px]">
+                    <img class="w-full max-w-[60px]" src="images/world.svg">
+                    <div class="pl-2 text-5xl tab:text-[66px] w-full leading-[normal]">100+ </div>
+                </div>
+                <div class="bot text-center font-bold text-3xl w-full">
+                    countries
                 </div>
             </div>
 
         </div>
 
-        <div class="mt-36 text-center">
-            <div class="h2-decoration h6-decoration h2-48 h6-max-350">
+        <div class="mt-14 md:mt-36 text-center">
+            <div class="h2-decoration h6-decoration h2-66 h6-max-350 h2-text-pink-400 p-18 h2-bottom-10 max-w-[440px] m-auto">
                 <h2>Hubshare acquisition</h2>
-            <h6>added collaborative information sharing through
-                secure user-friendly portals</h6>
+            <p>added collaborative information sharing through
+                secure user-friendly portals</p>
             </div>
-            <div class="mt-11">
+            <div class="mt-11 br-bot relative">
                 <div class="flex gap-10 text-center justify-center font-bold items-center ">
-                    <div class="year">2002</div>
-                    <div class="year">2005</div>
-                    <div class="year">2009</div>
-                    <div class="year">2011</div>
-                    <div class="year">2016</div>
-                    <div class="year">2017</div>
-                    <div class="year active">2021</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2002</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2005</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2009</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2011</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2016</div>
+                    <div class="year text-lg font-semibold py-4 px-3">2017</div>
+                    <div class="year text-lg font-semibold py-4 px-3 active">2021</div>
                 </div>
             </div>
 
-            <div class="max-w-[260px] text-[10px] m-auto">
+            <div class="max-w-[280px] text-xs m-auto mt-7 md:mt-16">
                 M-Files is a private company backed by the venture firms
    Bregal Milestone, Partech, Tesi, and Draper Esprit.
             </div>
@@ -190,13 +196,13 @@
     </div>
 </section>
 
-<section class="bg-cyan-100 py-24">
+<section class="bg-cyan-100 py-14 md:py-24 mutable-slider">
     <div class="max-w-6xl m-auto">
-        <div class="text-center mb-11 font-bold text-blue-900">
+        <div class="text-center mb-11 font-bold text-blue-900 mode-slide-title">
             <h2>People Love Working at M-Files</h2>
         </div>
         <div class="slide-out px-8">
-            <div class="swiper ">
+            <div class="swiper">
                 <div class="mySwiper">
                   <div class="sw-slide flex py-8 px-5 ">
                       <div class="max-w-[700px] m-auto">
@@ -207,24 +213,23 @@
                                 </div>
                             </div>
                               <div class="w-full md:w-3/4">
-                                  <div class="ml-4">
+                                  <div class="ml-5 mod-slide-cont">
                                       <div class="quote-img">
                                           <img src="images/quote.png">
                                       </div>
                                     <div class="content-p">
-                                        I have been ecstatic about working for M-Files. Change management and
-                                        easing the daily working processes of our customers sparks such joy among
-                                        all the individuals I get to train in our customer base but also internally. Our
-                                        organisation values its people and that's why it shows outward too.
+                                        <p>I have been ecstatic about working for M-Files. Change management and
+                                            easing the daily working processes of our customers sparks such joy among
+                                            all the individuals I get to train in our customer base but also internally. Our
+                                            organisation values its people and that's why it shows outward too.</p>
                                     </div>
                                     <div class="auth-info mt-7">
                                         <div class="name font-bold">Helinä</div>
                                         <div class="auth-des">Training Specialist</div>
                                     </div>
                                   </div>
-                                  <div class="btn-menu md:flex-initial mt-8 md:mt-11">
-                                    <a class="btn btn-blue border-none font-normal ">schedule a
-                                        demo</a>
+                                  <div class="btn-menu md:flex-initial mt-8 md:mt-11 ml-8">
+                                    <a class="btn btn-navy-blue bg-sea-700 border-none font-normal mode-slide-btn">Explore Careers</a>
                                 </div>
                               </div>
                         </div>
@@ -245,10 +250,10 @@
                                         <img src="images/quote.png">
                                     </div>
                                   <div class="content-p">
-                                      I have been ecstatic about working for M-Files. Change management and
-                                      easing the daily working processes of our customers sparks such joy among
-                                      all the individuals I get to train in our customer base but also internally. Our
-                                      organisation values its people and that's why it shows outward too.
+                                      <p>I have been ecstatic about working for M-Files. Change management and
+                                        easing the daily working processes of our customers sparks such joy among
+                                        all the individuals I get to train in our customer base but also internally. Our
+                                        organisation values its people and that's why it shows outward too.</p>
                                   </div>
                                   <div class="auth-info mt-7">
                                       <div class="name font-bold">Helinä</div>
@@ -304,12 +309,12 @@
 </section>
 
 
-<section class="sec-suth-slide py-20">
-    <div class="max-w-6xl m-auto">
+<section class="sec-suth-slide py-12 md:py-20">
+    <div class="main-container">
         <div class="text-center mb-14 ">
             <h2>Leadership Team</h2>
         </div>
-            <div class="">
+        <div class="slide-4-rp px-5 lg:px-20">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide rounded-md">
                         <div  x-data="{ open: false }" class="aut-in-rp overflow-hidden relative">
@@ -537,12 +542,12 @@
     </div>
 </section>
 
-<section class="sec-suth-slide py-20">
-    <div class="max-w-6xl m-auto">
+<section class="sec-suth-slide  py-12 md:py-20">
+    <div class="main-container">
         <div class="text-center mb-14 ">
             <h2>Board of Directors </h2>
         </div>
-            <div class="">
+        <div class="slide-4-rp px-5 lg:px-20">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide rounded-md">
                         <div  x-data="{ open: false }" class="aut-in-rp overflow-hidden relative">
@@ -781,24 +786,22 @@
 
 
 
-<footer class="bg-blue-900 footer pt-36 pb-12 px-5 md:px-0">
-    <div class="max-w-6xl m-auto ">
+<footer class="bg-blue-900 footer pt-14 md:pt-36 pb-12 md:px-5">
+    <div class="main-container">
         <div class="">
             <div class="logo-foo mb-7">
-                <img src="images/footer-logo.png" alt="footer logo">
+                <img src="./images/footer-logo.png" alt="footer logo">
             </div>
             <div class="footer-menu-wrap border-t-[1px] border-blue-100 pt-7">
                 <div class="flex flex-wrap f-foo">
                     <div class=" md:w-4/5">
 
-                        <div class="flex flex-wrap">
-                            <div class="w-full md:flex-1 mb-9 md:mb-0 wd-foo text-white-100 h6-foo">
+                        <div class="flex flex-wrap mbl-dsn">
+                            <div class="mb-wd w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
                                 <h6>Popular Links</h6>
                                 <ul>
-                                    <li><a href="#">2021 Gartner Magic Quadrant" for</a></li>
-                                    <li><a href="">Content Services Platforms</a></li>
-                                    <li><a href="">What is enterprise content</a></li>
-                                    <li><a href="">management?</a></li>
+                                    <li><a href="#">2021 Gartner Magic Quadrant" for Content Services Platforms</a></li> 
+                                    <li><a href="">What is enterprise content management?</a></li> 
                                     <li><a href="">Business process management</a></li>
                                     <li><a href="">Collaboration solutions</a></li>
                                     <li><a href="">Solutions by Industry</a></li>
@@ -806,78 +809,72 @@
                                     <li><a href="">M-Files Editions</a></li>
                                 </ul>
                             </div>
-                            <div class="w-full md:flex-1 mb-9 md:mb-0 wd-foo text-white-100 h6-foo">
+                            <div class="mb-wd w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
                                 <h6>Popular Links</h6>
                                 <ul>
-                                    <li><a href="#">2021 Gartner Magic Quadrant" for</a></li>
-                                    <li><a href="">Content Services Platforms</a></li>
-                                    <li><a href="">What is enterprise content</a></li>
-                                    <li><a href="">management?</a></li>
-                                    <li><a href="">Business process management</a></li>
-                                    <li><a href="">Collaboration solutions</a></li>
-                                    <li><a href="">Solutions by Industry</a></li>
-                                    <li><a href="">Key Capabilities</a></li>
-                                    <li><a href="">M-Files Editions</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="">Schedule a Demo</a></li>
+                                    <li><a href="">Get a Quote</a></li>
+                                    <li><a href="">Careers</a></li>
+                                    <li><a href="">Trust Center</a></li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                    <li><a href="">Security Hall of Fame</a></li> 
                                 </ul>
                             </div>
-                            <div class="w-full md:flex-1 mb-9 md:mb-0 wd-foo text-white-100 h6-foo">
+                            <div class="mb-wd w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn pr-10 lap:pr-24">
                                 <h6>Popular Links</h6>
                                 <ul>
-                                    <li><a href="#">2021 Gartner Magic Quadrant" for</a></li>
-                                    <li><a href="">Content Services Platforms</a></li>
-                                    <li><a href="">What is enterprise content</a></li>
-                                    <li><a href="">management?</a></li>
-                                    <li><a href="">Business process management</a></li>
-                                    <li><a href="">Collaboration solutions</a></li>
-                                    <li><a href="">Solutions by Industry</a></li>
-                                    <li><a href="">Key Capabilities</a></li>
-                                    <li><a href="">M-Files Editions</a></li>
+                                    <li><a href="#">Customer Support Portal</a></li>
+                                    <li><a href="">Partner Hub</a></li>
+                                    <li><a href="">Developer Portal</a></li>
+                                    <li><a href="">User Guide</a></li>
+                                    <li><a href="">How-to Videos</a></li>
+                                    <li><a href="">Product News</a></li>
+                                    <li><a href="">Terms and Conditions</a></li> 
                                 </ul>
                             </div>
-                            <div class="w-full md:flex-1  wd-foo text-white-100 h6-foo">
-                                <h6>Popular Links</h6>
-                                <ul>
-                                    <li><a href="#">2021 Gartner Magic Quadrant" for</a></li>
-                                    <li><a href="">Content Services Platforms</a></li>
-                                    <li><a href="">What is enterprise content</a></li>
-                                    <li><a href="">management?</a></li>
-                                    <li><a href="">Business process management</a></li>
-                                    <li><a href="">Collaboration solutions</a></li>
-                                    <li><a href="">Solutions by Industry</a></li>
-                                    <li><a href="">Key Capabilities</a></li>
-                                    <li><a href="">M-Files Editions</a></li>
+                            <div class="mb-wd w-full md:w-1/4 mb-9 md:mb-0 wd-foo text-white-100 h6-foo footer-mn lap:pr-14 lst-mn md:pt-9">
+                                <ul> 
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="">Cookie Preferences</a></li>
+                                    <li><a href="">Terms of Use</a></li> 
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/5">
-                        <div class="max-w-[160px] mt-11 md:mt-0 md:ml-auto">
+                    <div class="w-full md:w-1/5">
+                        <div class="max-w-[130px] md:max-w-[160px] mt-4 md:mt-0 md:ml-auto">
                             <div class="ul-list social-footer ">
                                 <ul>
-                                    <li><a href=""><img src="images/facebook-brands.svg"></a></li>
-                                    <li><a href=""><img src="images/instagram-brands.svg"></a></li>
-                                    <li><a href=""><img src="images/linkedin-brands.svg"></a></li>
-                                    <li><a href=""><img src="images/twitter-brands.svg"></a></li>
-                                    <li><a href=""><img src="images/youtube-brands.svg"></a></li>
-                                    <li><a href=""><img src="images/blog-solid.svg"></a></li>
+                                    <li><a href=""><img src="./images/facebook-brands.svg"></a></li>
+                                    <li><a href=""><img src="./images/instagram-brands.svg"></a></li>
+                                    <li><a href=""><img src="./images/linkedin-brands.svg"></a></li>
+                                    <li><a href=""><img src="./images/twitter-brands.svg"></a></li>
+                                    <li><a href=""><img src="./images/youtube-brands.svg"></a></li>
+                                    <li><a href=""><img src="./images/blog-solid.svg"></a></li>
                                 </ul>
                             </div>
-                        </div>"
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copyright-wrap text-white-100 text-xs mt-16">
-            <p>2022 M-Files, AII Rights Reserved</p>
+        <div class="copyright-wrap text-blue-100 text-xs mt-10 md:mt-16">
+            © 2022 M-Files, All Rights Reserved
         </div>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="//unpkg.com/alpinejs" defer></script>
-<script src="assets/script.js"></script>
 
+
+
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="./assets/script.js"></script>
 
 </body>
 

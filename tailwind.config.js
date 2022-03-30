@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     screens: {
       sm: '480px',
-      md: '768px',
-      lg: '976px',
+      md: '568px',
+      tab:'768px',
+      lg: '1025px',
       lap:'1280px',
       xl: '1440px',
       xxl: '1560px'
@@ -41,7 +42,8 @@ module.exports = {
         100:'#C9EFF0'
       },
       'sea':{
-        100:'#52C0C9'
+        100:'#52C0C9',
+        700:'#006878'
       },
       'aliceblue':{
         100:'#EBF3F9'

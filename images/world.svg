@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.823" height="63.489" viewBox="0 0 55.823 63.489">
+  <g id="world_100x100" data-name="world@100x100" transform="translate(2.825 2.825)">
+    <path id="Path" d="M0,20.013A20.148,20.148,0,1,0,20.147,0,20.081,20.081,0,0,0,0,20.013Z" transform="translate(2.646 2.628)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-2" data-name="Path" d="M39.892,0a27.888,27.888,0,0,1,0,39.625,28.34,28.34,0,0,1-39.89,0" transform="translate(2.847 2.831)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-3" data-name="Path" d="M2.847,0,0,2.831" transform="translate(42.739)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-4" data-name="Path" d="M2.847,0,0,2.831" transform="translate(0 42.455)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-5" data-name="Path" d="M1.343,0V8.005" transform="translate(21.45 50.66)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-6" data-name="Path" d="M0,1.334H32.236" transform="translate(6.675 57.332)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-7" data-name="Path" d="M0,0H4.368A4.016,4.016,0,0,1,8.4,4V8.35a3.989,3.989,0,0,0,1.179,2.831l3.1,3.082a3.984,3.984,0,0,1,.975,4.1l-.83,2.471a4,4,0,0,1-1.4,1.935L8.153,25.2" transform="translate(4.322 14.636)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+    <path id="Path-8" data-name="Path" d="M4.864,0C3.771.867,2.605,1.767,1.571,2.559A3.985,3.985,0,0,0,.805,8.131l2.447,3.226a4.039,4.039,0,0,0,3.224,1.6H8.837a4.043,4.043,0,0,1,2.847,1.174l3.1,3.082a4.047,4.047,0,0,0,3.761,1.067" transform="translate(24.376 3.68)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.996"/>
+  </g>
+</svg>

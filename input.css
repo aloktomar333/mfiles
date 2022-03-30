@@ -16,16 +16,16 @@
 
 @layer base {
     h1 {
-        @apply text-4xl md:text-[66px] md:leading-[66px];
+        @apply text-4xl md:text-5xl lg:text-[66px] md:leading-[66px];
       }
     h2 {
-      @apply font-bold text-4xl leading-[46px] md:text-[42px] md:leading-[52px];
+      @apply font-bold text-4xl leading-[36px] lg:text-[42px] lg:leading-[52px];
     }
     h3 {
         @apply font-bold text-[32px];
     }
     h4{
-    @apply font-bold text-xl;
+     @apply font-bold text-xl;
     }
     h5{
      @apply font-bold text-lg leading-6 ;
@@ -34,7 +34,7 @@
         @apply w-full md:max-w-6xl  m-auto px-5 xxl:p-0;
     }
     .banner-right-content {
-        @apply text-white-100 leading-loose font-bold relative pr-0 md:pr-32 py-20 xxl:pr-44 z-[3];
+        @apply text-white-100 leading-loose font-bold relative pr-0 lg:pr-32 py-20 xxl:pr-44 z-[3];
     }
     .h2-blue-300 h2{
         @apply text-blue-300;
@@ -52,7 +52,7 @@
   @layer components {
 
     .btn {
-      @apply inline-flex max-h-[42px] items-center justify-center text-[13px] px-11 py-[11px] tracking-[0.062em] uppercase rounded-[5px] cursor-pointer transition-all font-semibold;
+      @apply inline-flex max-h-[42px] items-center justify-center text-xs lg:text-[13px] px-7 lg:px-11 py-[11px] tracking-[0.062em] uppercase rounded-[5px] cursor-pointer transition-all font-semibold;
     }
     .btn-pink{
         @apply bg-pink-400 text-white-100  hover:transition-all hover:bg-white-100 hover:text-blue-900;
@@ -73,10 +73,10 @@
         @apply cursor-pointer;
     }
     .tab{
-        @apply text-[#1c243a66] duration-500  tap-click font-bold px-3 md:px-12 w-1/3 md:w-full md:flex-1 text-center border-none flex justify-center items-center py-3 -mt-[1px] transition;
+        @apply text-[#1c243a66] duration-500  tap-click font-bold px-3 md:px-6 lg:px-12 w-1/3 md:w-full md:flex-1 text-center border-none flex justify-center items-center py-3 -mt-[1px] transition;
     }
     .tab-30{
-        @apply text-xl md:text-3xl leading-[30px];
+        @apply  text-base leading-7 lg:text-3xl lg:leading-[36px];
     }
     .active-tab{
         @apply bg-white-100  text-black-100 border-none rounded-br-[5px] relative z-20 rounded-bl-[5px] shadow-[2px_2px_3px_#1c243a1a] ;
@@ -94,7 +94,7 @@
         @apply bg-blue-100 border-blue-100 text-blue-800 hover:transition-all hover:bg-blue-900 hover:text-white-100;
     }
     .year.active{
-        @apply bg-pink-400 py-4 px-2 text-white-100;
+        @apply bg-pink-400 py-4 px-3 text-white-100;
     }
     .link{
         @apply  uppercase font-semibold text-[13px] tracking-[0.062em];
@@ -429,7 +429,7 @@
         top: 50%;
         transform: translatey(-50%);
         font-size: 0;
-        background: url(/images/arrow-right-green.png);
+        background: url(/images/grey-arrow-right.svg);
         width: 30px;
         height: 49px;
         background-repeat: no-repeat;
@@ -440,7 +440,7 @@
         top: 50%;
         transform: translatey(-50%);
         font-size: 0;
-        background: url(/images/arrow-right-green.png);
+        background: url(/images/icons-arrow-down.svg);
         width: 30px;
         height: 49px;
         background-repeat: no-repeat;
@@ -500,7 +500,7 @@
         top: 50%;
         transform: translatey(-50%);
         font-size: 0;
-        background: url(/images/grey-arrow.png);
+        background: url(./images/grey-arrow.png);
         width: 30px;
         height: 49px;
         background-repeat: no-repeat;
@@ -525,13 +525,15 @@
     }
     
     .mySwiper ul.slick-dots li button {
-        background: #000;
+        background-color: #52c0c94d;
         width: 12px;
         height: 12px;
         border-radius: 50%;
         font-size: 0;
     }
-
+    .mySwiper ul.slick-dots li.slick-active button {
+        background-color: #52C0C9;
+    }
 
     .dots-decoration ul.slick-dots {
         display: flex;
@@ -603,27 +605,7 @@
         display: inline-flex;
     }
 
-    
-    #search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: #1F1F29;
-      }
-      #search::-moz-placeholder { /* Firefox 19+ */
-        color: #1F1F29;
-      }
-      #search:-ms-input-placeholder { /* IE 10+ */
-        color: #1F1F29;
-      }
-      #search:-moz-placeholder { /* Firefox 18- */
-        color: #1F1F29;
-      }
-      #search {
-        background-image: url(../images/icons-search.svg);
-        background-size: 19px;
-        background-repeat: no-repeat;
-        background-position: 6px center;
-        min-height: 30px;
-        min-width: 146px;
-    }
+  
     .h2-mb-5 h5{
         margin-bottom: 5px;
     }
@@ -670,13 +652,67 @@
     .tc-box-dec .brd-cmd:last-child {
         border: none;
     }
+    .h4-head-ban-dec h4 {
+        font-size: 24px;
+        line-height: 34px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+    }
+    .h4-banner-top-space h4 {
+        margin-top: 15px;
+    }
+    .h2-bottom-10 h2 {
+        margin-bottom: 10px;
+    }
+    .leading-\[normal\] {
+        line-height: normal;
+    }
+    .h2-text-pink-400 h2{
+        color: var(--pink)
+    }
+    .h2-66 h2{
+        font-size:66px;
+        line-height: 66px;
+    }
+    .p-18 p{
+        font-size: 18px;
+    }
+    .br-bot:after {
+        background-color: #707070;
+        content: "";
+        height: 1px;
+        width: calc(100% - 300px);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%);
+    }
+    .footer-mn a{
+        color: #fff;
+    }
+    .ind-box .slick-track {
+        padding: 70px 0 20px;
+    }
+
+    /*******media css max-width***/
     @media(max-width:1200px) {
         .menu-left-mrg-a li a {
             margin-left: 40px;
         }
 
     }
-    @media(max-width:767px) {
+    @media (max-width: 1024px){
+        .top-menu-left-a a {
+            margin-left: 20px;
+            transition: all 0.3s;
+            color: var(--black-100);
+            font-size: 13px;
+        }
+        .menu-left-mrg-a li a {
+            margin-left: 15px;
+        }
+    }
+    @media(max-width: 768px){
         .menu {
             display: flex;
             z-index: 999;
@@ -713,6 +749,40 @@
         .nav-wrap.active {
             transform: translatex(0);
         }
+        .mob-search input#search {
+            min-width: unset;
+            width: 25px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        input#search.active {
+            width: 130px;
+            background-color: #ebede5;
+        }
+          
+        #search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #1F1F29;
+        }
+        #search::-moz-placeholder { /* Firefox 19+ */
+            color: #1F1F29;
+        }
+        #search:-ms-input-placeholder { /* IE 10+ */
+            color: #1F1F29;
+        }
+        #search:-moz-placeholder { /* Firefox 18- */
+            color: #1F1F29;
+        }
+        #search {
+            background-image: url(../images/icons-search.svg);
+            background-size: 19px;
+            background-repeat: no-repeat;
+            background-position: 6px center;
+            min-height: 30px;
+            min-width: 146px;
+        }
+    }
+    @media(max-width:568px) {
+       
         button.menu.opened .line {
             fill: none;
             stroke: white;
@@ -732,18 +802,25 @@
             padding-bottom: 0.75rem;
             width: 100%;
         }
-        .mob-search input#search {
-            min-width: unset;
-            width: 25px;
-            background-color: transparent;
-            cursor: pointer;
-        }
-        input#search.active {
-            width: 130px;
-            background-color: #ebede5;
-        }
         .bg-blue-700.mutable-tab-section .mod-rev {
             flex-direction: column-reverse;
+        }
+        .h2-66 h2{
+            font-size:46px;
+        }
+        .br-bot {
+            overflow-y: scroll;
+        }
+        .br-bot:after {
+            width: 100%;
+        }
+        .sec-suth-slide .slick-next.slick-arrow {
+            position: absolute;
+            right: -20px;
+        }
+        .sec-suth-slide .slick-prev.slick-arrow {
+            position: absolute;
+            left: -20px;
         }
     }
   }
