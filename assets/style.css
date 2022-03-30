@@ -605,6 +605,13 @@ p {
   transition-duration: 150ms;
 }
 
+.pop-inner-over > .btn {
+  max-height: calc(100% - 50px);
+  overflow: auto;
+  padding-right:10px;
+  margin-bottom: 10px;
+}
+
 @media (min-width: 1025px) {
   .btn {
     padding-left: 2.75rem;
@@ -962,6 +969,18 @@ p {
   z-index: -10;
 }
 
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-end-3 {
+  grid-column-end: 3;
+}
+
+.col-end-4 {
+  grid-column-end: 4;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -1246,8 +1265,16 @@ p {
   cursor: pointer;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1569,12 +1596,12 @@ p {
   padding-left: 0.5rem;
 }
 
-.pl-9 {
-  padding-left: 2.25rem;
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
-.pr-4 {
-  padding-right: 1rem;
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 .pt-5 {
@@ -1583,6 +1610,14 @@ p {
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-14 {
@@ -1641,10 +1676,6 @@ p {
   padding-top: 1.5rem;
 }
 
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
 }
@@ -1678,6 +1709,11 @@ p {
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1686,11 +1722,6 @@ p {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .text-\[66px\] {
@@ -2196,9 +2227,11 @@ body{
   z-index: 9;
 }
 
-.pop-inner-over > div {
-  max-height: 240px;
+.pop-inner-over > .text-xs {
+  max-height: calc(100% - 50px);
   overflow: auto;
+  padding-right:10px;
+  margin-bottom: 10px;
 }
 
 .swiper-slide:hover .swiper-img {
@@ -2247,7 +2280,7 @@ body{
   top: 50%;
   transform: translatey(-50%);
   font-size: 0;
-  background: url(./images/grey-arrow.png);
+  background: url(/images/grey-arrow-right.svg);
   width: 30px;
   height: 49px;
   background-repeat: no-repeat;
@@ -2259,7 +2292,7 @@ body{
   top: 50%;
   transform: translatey(-50%);
   font-size: 0;
-  background: url(/images/grey-arrow.png);
+  background: url(/images/icons-arrow-down.svg);
   width: 30px;
   height: 49px;
   background-repeat: no-repeat;
@@ -2481,6 +2514,11 @@ body{
 @media(max-width:1200px) {
   .menu-left-mrg-a li a {
     margin-left: 40px;
+  }
+
+  .flip-n,.fl-img {
+    max-width: 30px;
+    margin: auto 0 auto auto;
   }
 }
 
@@ -2927,6 +2965,24 @@ body{
 
   .lg\:pr-24 {
     padding-right: 6rem;
+  }
+
+  .lg\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .lg\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .tap-box.active.lg\:hidden {

@@ -446,9 +446,11 @@
         background-repeat: no-repeat;
         z-index: 9;
     }
-    .pop-inner-over > div {
-        max-height: 240px;
+    .pop-inner-over > .text-xs {
+        max-height: calc(100% - 50px);
         overflow: auto;
+        padding-right:10px;
+        margin-bottom: 10px;
     }
     
     .swiper-slide:hover .swiper-img {
@@ -500,7 +502,7 @@
         top: 50%;
         transform: translatey(-50%);
         font-size: 0;
-        background: url(./images/grey-arrow.png);
+        background: url(/images/grey-arrow-right.svg);
         width: 30px;
         height: 49px;
         background-repeat: no-repeat;
@@ -511,7 +513,7 @@
         top: 50%;
         transform: translatey(-50%);
         font-size: 0;
-        background: url(/images/grey-arrow.png);
+        background: url(/images/icons-arrow-down.svg);
         width: 30px;
         height: 49px;
         background-repeat: no-repeat;
@@ -698,6 +700,10 @@
     @media(max-width:1200px) {
         .menu-left-mrg-a li a {
             margin-left: 40px;
+        }
+        .flip-n,.fl-img {
+            max-width: 30px;
+            margin: auto 0 auto auto;
         }
 
     }
